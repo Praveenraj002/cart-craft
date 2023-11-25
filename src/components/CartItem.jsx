@@ -23,19 +23,19 @@ const CartItem = ({ item }) => {
   return (
     <>
       <div
-        className="bg-white drop-shadow-xl flex flex-col md:flex-row items-center md:justify-between md:items-start p-4 my-4 rounded-md"
+        className="w-full bg-white drop-shadow-xl flex flex-col md:flex-row items-center md:justify-between md:items-start md:p-4 my-4 rounded-md "
         id={id}
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-6">
+        <div className="flex flex-row items-center md:items-start gap-2 md:gap-6 mt-8 md:mt-0">
           <div className="w-16 md:w-20">
             <img src={image} alt="nothing" className="w-full h-full" />
           </div>
-          <div className="flex flex-col gap-2 items-center md:items-start">
+          <div className="flex flex-col gap-2 items-start">
             <h1 className="font-bold text-xl">{name}</h1>
             <h1>by {brand}</h1>
           </div>
         </div>
-        <div className="flex flex-row items-center md:flex-col gap-4 text-center">
+        <div className="flex flex-row mt-6 mb-10 md:m-2 items-center md:flex-col gap-4 text-center">
           <h1 className="font-bold text-xl">₹{price}</h1>
           <div className="flex flex-row items-center gap-3">
             <button

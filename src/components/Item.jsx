@@ -24,18 +24,19 @@ const Item = ({ data, addItemsToCart }) => {
             <h1 className="font-bold text-xl">{ItemName}</h1>
             <h1>by {ItemBrand}</h1>
             <h1 className="flex items-center gap-1 font-bold text-green-500">
-              {ItemRating} <FaStar className="text-green-500" />
+              {ItemRating} <FaStar className="text-green-500" />{" "}
+              <span className="text-black">|</span>
               <span>5000+ Ratings</span>
             </h1>
             <p className="hidden md:flex w-80 text-sm">{ItemDescription}</p>
           </div>
         </div>
-        <div className="flex flex-row items-center md:flex-col gap-2 text-center">
-          <h1 className="font-bold text-xl">₹{ItemPrice}</h1>
+        <div className="flex flex-col mt-4 md:mt-0 items-center md:flex-col gap-2 text-center">
+          <h1 className="font-bold text-2xl">₹{ItemPrice}.00</h1>
           <h1 className="hidden md:flex text-cartBlue">{ItemOffer} Off</h1>
           <h1 className="hidden md:flex text-xs">Delivery by 11pm tomorrow</h1>
           <button
-            className="my-10 md:text-xl bg-cartBlue text-white px-3 rounded-md py-1 hover:bg-cartButton hover:text-cartBlue font-semibold"
+            className="my-4 md:my-10 md:text-xl bg-cartBlue text-white px-3 rounded-md py-1 hover:bg-cartButton hover:text-cartBlue font-semibold"
             onClick={() =>
               addItemsToCart(
                 id,
